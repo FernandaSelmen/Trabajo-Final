@@ -1,0 +1,14 @@
+{% extends 'usuario/base.html' %}
+{% load static %}
+
+{% block contenido %}
+  <h1>Agregar post</h1>
+
+  <form action=''  method="POST">    {% csrf_token %}
+    
+    {{ form.as_table }}
+
+    <button type="submit">Publicar</button>
+  </form>
+  
+{% endblock %}

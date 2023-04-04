@@ -1,0 +1,18 @@
+{% extends 'usuario/base.html' %}
+{% load static %}
+
+<h1>Editar publicacion</h1>
+
+  <form action=''  method="POST">    {% csrf_token %}
+    
+    {{ textox.as_table }}
+
+    <button type="submit">Publicar</button>
+  </form>
+
+
+
+
+{% block contenido %}
+
+{% endblock %}

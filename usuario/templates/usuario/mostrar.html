@@ -1,0 +1,30 @@
+{% extends 'usuario/base.html' %}
+{% load static %}
+
+{% block contenido %}
+<table>
+    <th> id </th>
+    <th> titulo </th>
+    <th> subtitulo</th>
+    <th> imagen </th>
+    <th> contenido </th>
+
+    {% for muestra in mostra %}
+        <tr>
+            <td>{{muestra.id}}</td>
+            <td>{{muestra.titulo}}</td>
+            <td>{{muestra.subtitulo}}</td>
+            <td>{{muestra.imagen}}</td>
+            <td>{{contenido}}</td> 
+
+            <td><a href="{% url 'editar' muestra.id %}"> Editar </a> </td> 
+
+
+            <td><a href="{% url 'eliminar' muestra.id %}"> Eliminar </a> </td> 
+           
+        </tr>
+    {% endfor %}
+
+
+
+{% endblock %}
