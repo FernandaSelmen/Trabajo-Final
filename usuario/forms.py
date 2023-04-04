@@ -6,7 +6,7 @@ class TextoForm(forms.Form):
     subtitulo = forms.CharField(max_length=100)
     dia = forms.DateField()
     imagen = forms.ImageField()
-    contenido = forms.Textarea()
+    contenido = forms.CharField(widget=forms.Textarea)
 
 
     
